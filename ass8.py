@@ -1,8 +1,5 @@
 class Bank_Account: 
-    def __init__(self,accountNumber, name, balance):
-        self.accountNumber = accountNumber
-        self.name = name
-        self.balance = balance
+    
     def __init__(self): 
         self.balance=0
         print("Hello!!! Welcome to the Deposit & Withdrawal Machine") 
@@ -20,20 +17,13 @@ class Bank_Account:
         else: 
             print("\n Insufficient balance  ") 
     def bankFees(self):
-        self.balance = (95/100)*self.balance        
+        self.balance = (95/100)*self.balance 
+        print(self.balance)       
   
     def display(self): 
-        print("\n Net Available Balance=",self.balance) 
-    def display(self):
-        print("Account Number : " , self.accountNumber)
-        print("Account Name : " , self.name)
-        print("Account Balance : " , self.balance , " $")    
-newAccount = BankAccount(2178514584, "Albert" , 2700)   
-   
+        print("\n Net Available Balance=",self.balance)   
 s = Bank_Account() 
-
- 
 s.deposit() 
-s.withdraw() 
+s.withdraw()
+s.bankFees() 
 s.display() 
-newAccount.display()
